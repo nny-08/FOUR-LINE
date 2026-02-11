@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>抽獎管理後台</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>管理後台</h1>
+
+<button onclick="generateCode()">生成新驗證碼</button>
+<p>新驗證碼：<span id="newCode"></span></p>
+
+<h2>抽獎歷史</h2>
+<table border="1">
+    <thead>
+        <tr><th>驗證碼</th><th>獎項</th><th>時間</th></tr>
+    </thead>
+    <tbody id="historyTable"></tbody>
+</table>
+
+<script src="admin.js"></script>
+</body>
+</html>

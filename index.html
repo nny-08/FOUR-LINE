@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>扭蛋抽獎</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="coverScreen">
+    <img src="images/cover.png" class="cover">
+    <img src="images/arrow.png" class="arrow" onclick="showCodeInput()">
+</div>
+
+<div id="codeScreen" style="display:none;">
+    <h2>請輸入驗證碼</h2>
+    <input type="text" id="codeInput" maxlength="4">
+    <button onclick="verifyCode()">進入抽獎</button>
+    <p id="codeMsg"></p>
+</div>
+
+<div id="gachaScreen" style="display:none;">
+    <img src="images/machine.png" class="machine">
+    <button onclick="drawPrize()">抽獎</button>
+    <p id="drawInfo">已抽：0 / 剩餘：0</p>
+</div>
+
+<div id="prizePopup" style="display:none;">
+    <span class="close" onclick="closePrize()">&times;</span>
+    <img id="prizeImg" src="">
+    <audio id="prizeSound" src="sound.mp3"></audio>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
